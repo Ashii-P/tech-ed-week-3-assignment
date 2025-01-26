@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Cookie Clicker</title>
+    <link rel="icon" type="image/x-icon" href="asset/cookie_1.png" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <section class="htp-modal hidden">
+          <!-- Close modal button -->
+          <div class="how-to-play">
+            <p>
+              The game generates 1 cookie per second, and each click on the
+              cookie image earns you even more. To increase your production,
+              purchase upgrades as you gather enough cookies. For instance, an
+              'Cookie Farm' costs 1000 cookies and boosts your production to 10
+              cookies per second. Keep track of how many cookies you can
+              accumulate. Enjoy the game!
+            </p>
+          </div>
+        </section>
+        <div class="overlay hidden"></div>
+        <button id="howTo">How To Play</button>
+        <h1 id="title">Cookie Clicker</h1>
+        <section class="menue-modal hidden">
+          <!-- Close modal button -->
+          <div class="flex"><button class="btn-close">X</button></div>
+          <!-- Sound toggle sect -->
+          <div class="toggle">
+            <input type="checkbox" id="sound-toggle" />
+            <label for="sound-toggle"><span>Sound</span> <span></span></label>
+            <audio id="audio-elem" src="asset/game_music_2.mp3" loop></audio>
+          </div>
+          <!-- Volume up and down bar-->
+          <div class="volume">
+            <label for="volume">
+              <img class="volume-icon" src="asset/volume.gif" />
+            </label>
+            <input
+              type="range"
+              id="volume"
+              name="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+            />
+          </div>
+          <!-- Reset button -->
+          <div>
+            <button id="reset" class="reset-btn">Reset Game</button>
+          </div>
+        </section>
+        <div class="overlay hidden"></div>
+        <button class="btn btn-open">Menu</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="grid-container">
+        <div class="cookie-container">
+          <img src="asset/cookie_1.png" alt="Cookie Image" width="500vh" />
+        </div>
+        <div class="counter-container">
+          <p>Cookies:</p>
+          <h2 id="h2Tag"></h2>
+          <p class="cps-title">CPS</p>
+          <h4 id="h4Tag"></h4>
+        </div>
+        <div class="shop-container"></div>
+      </div>
+
+      <div class="popup">
+        <span class="popup-text" id="popup-text">
+          You don't have enough cookies!
+        </span>
+      </div>
+    </main>
+  </body>
+</html>
