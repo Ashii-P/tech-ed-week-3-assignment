@@ -391,7 +391,7 @@ main {
 /* for tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background: linear-gradient(#e7d4ab, #f2e7cf);
   }
